@@ -1,0 +1,12 @@
+There is library called coverage for testing.
+To install coverage python library :
+> pip install coverage 
+
+To test simply by using coverage :
+> coverage test 
+
+To get a cmd report of test :
+> coverage manage.py test 
+
+To get a html report :
+> coverage html
