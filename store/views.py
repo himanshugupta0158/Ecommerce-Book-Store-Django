@@ -1,19 +1,19 @@
-from pyexpat import model
-from re import template
-from django.shortcuts import render , get_object_or_404
+from django.shortcuts import get_object_or_404, render
+
 from .models import Category, Product
 
 
-# adding below function view to setting to make it avaiable in whole project
-def categories(request):
-    return {'categories' : Category.objects.all()}
+def product_all(request):
+    products = Product.products.all()
+    return render(request, 'store/home.html', {'products': products})
 
-    
-def all_products(request):
-    product_list = Product.objects.all()
-    return render(request , 'store/home.html' , {'product_list':product_list})
-        
 
-def product_detail(request , slug):
-    product = get_object_or_404(Product , slug=slug , in_stock = True)
-    
+def product_detail(request, slug):
+    product = get_object_or_404(Product, slug=slug, in_stock=True)
+    return render(request, "store/products/product_detail.html", {"product": product})
+
+
+def category_list(request, category_slug):
+    category = get_object_or_404(Category, slug=category_slug)
+    products = Product.objects.filter(category=category)
+    return render(request, "store/products/product_category.html", {'category': category, "products": products})

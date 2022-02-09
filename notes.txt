@@ -1,12 +1,27 @@
 There is library called coverage for testing.
-To install coverage python library :
-> pip install coverage 
+To install coverage python library:
+> pip install coverage
 
-To test simply by using coverage :
-> coverage test 
+To test simply by using coverage:
+> coverage test
 
-To get a cmd report of test :
-> coverage manage.py test 
+To get a cmd report of test:
+> coverage manage.py test
+or by using virtualenv for testing.
+> coverage run - -omit = '*/.venv/*' manage.py test
 
-To get a html report :
+To get a html report:
 > coverage html
+
+For sorting and arranging python code nicely and beautifully:
+we can use:
+1 > autopep8: pip install autopep8
+It can arrange whitespaces and new lines in python code
+COMMAND: autopep8 - - in -place < pythonfilename.py >
+2 > flake8: pip install flake8
+It can report files which need to be change as per coding standard.
+COMMAND: flake8
+3 > flake8-isort: pip install flake8-isort
+It can sort python file by their name
+COMMAND: isort . -> > for normal sorting
+for more isort -> will show all option in it.

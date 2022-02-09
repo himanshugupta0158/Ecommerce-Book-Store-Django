@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-b%)yyecn)fvv&)r@otp)m3wcs9h7hrp5x$n1!h04a*q^mry3r=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mydomain.com' , '127.0.0.1']
 
 
 # Application definition
@@ -66,7 +66,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 # adding a function view to this template to make it available in all pages/files
-                'store.views.categories',
+                'store.context_processors.categories',
             ],
         },
     },
