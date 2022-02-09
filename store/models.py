@@ -12,7 +12,8 @@ Models are like a template to create database table in database.
 
 class ProductManager(models.Manager):
     def get_queryset(self):
-        return super(ProductManager , self).get_queryset().filter(is_active=True)
+        return super(ProductManager, self).get_queryset().filter(is_active=True)
+
 
 class Category(models.Model):
     name = models.CharField(_("Category Name"), max_length=255, db_index=True)
@@ -29,7 +30,7 @@ class Category(models.Model):
     class Meta:
         # overwriting name in django db
         verbose_name_plural = 'categories'
-        
+
     def get_absolute_url(self):
         return reverse('store:category_list', args=[self.slug])
 
@@ -62,7 +63,6 @@ class Product(models.Model):
 
     def get_absolute_url(self):
         return reverse('store:product_detail', args=[self.slug])
-
 
     def __str__(self):
         return self.title
