@@ -20,5 +20,5 @@ class ProductAdmin(admin.ModelAdmin):
     ]
     list_filter = ['in_stock', 'is_active', ]
     # allow some fields to be editable even not even need to go to option.
-    list_editable = ['price', 'in_stock' ,]
+    list_editable = ['price', 'in_stock', ]
     prepopulated_fields = {'slug': ('title',)}

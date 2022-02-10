@@ -20,10 +20,11 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('store.urls' , namespace='store')),
-    
+    path('', include('store.urls', namespace='store')),
+    path('basket/', include('basket.urls', namespace='basket')),
+
 ]
 
 # if settings.DEBUG occurs then MEDIA url and root will be added to urlpatters
-if settings.DEBUG : 
-    urlpatterns += static(settings.MEDIA_URL , document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

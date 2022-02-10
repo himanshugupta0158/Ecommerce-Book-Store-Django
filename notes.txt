@@ -25,3 +25,15 @@ COMMAND: flake8
 It can sort python file by their name
 COMMAND: isort . -> > for normal sorting
 for more isort -> will show all option in it.
+
+Session : 
+-> Session is temporary and interactive information.
+-> Single user per session - save retieve arbitrary data on 
+a per-site-visitor basis.
+-> Store the data on server side.
+-> Session ID is used to retrieve the associated data.
+-> Data in session can be -> user's data , data related to website,..etc.
+
+
+
+
