@@ -68,6 +68,8 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 # adding a function view to this template to make it available in all pages/files
                 'store.context_processors.categories',
+                # context processor of basket
+                'basket.context_processors.basket',
             ],
         },
     },
