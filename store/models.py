@@ -1,7 +1,8 @@
-from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
+
+from account.models import UserBase
 
 # Create your models here.
 
@@ -47,7 +48,7 @@ class Product(models.Model):
     category = models.ForeignKey(
         Category, related_name='product', on_delete=models.CASCADE)
     created_by = models.ForeignKey(
-        User, related_name='product_creator', on_delete=models.CASCADE)
+        UserBase, related_name='product_creator', on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     author = models.CharField(max_length=255, default='admin')
     description = models.TextField(blank=True)
