@@ -42,20 +42,20 @@
 
                                 <label class="form-label">{{ form.password.label}}</label>
                                 {{ form.password}}
+                                <p class="small text-left pt-2">
+                                    <a style="text-decoration:None;" href="{% url "account:pwdreset" %}">Forgotten Password?</a>
+                                </p>
                                 <div class="d-grid gap-2">
                                     <input type="hidden" name="next" value="{{ next }}">
                                     <button class="btn btn-primary py-2 mb-4 mt-5 fw-bold" type="submit" value="Log-in">Sign in
                                     </button>
                                 </div>
                                 <p class="text-center pb-3">
-                                    <a href="{% url "account:register" %}">Create an account</a>
+                                    <a style="text-decoration:None;" href="{% url "account:register" %}">Create an account</a>
                                 </p>
                             </form>
-                            <p class="small text-center pt-4">
-                                {% comment %} <a href="{% url "password_reset" %}">Forgotten Password?</a> {% endcomment %}
-                            </p>
                             <p class="small text-center">
-                                {% comment %} <a href="{% url "accounts:register" %}">Help Center?</a> {% endcomment %}
+                                {% comment %} <a href="{% url "account:register" %}">Register</a> {% endcomment %}
                             </p>
                      
                         </div>

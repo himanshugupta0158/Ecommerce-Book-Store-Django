@@ -3,8 +3,8 @@ from six import text_type
 
 
 class AccountActivationTokenGenerator(PasswordResetTokenGenerator):
-    
-    def _make_hash_value(self , user , timestamp):
+
+    def _make_hash_value(self, user, timestamp):
         """
         Generating time-based hash token
         """
@@ -14,5 +14,6 @@ class AccountActivationTokenGenerator(PasswordResetTokenGenerator):
             text_type(user.pk) + text_type(timestamp) +
             text_type(user.is_active)
         )
+
 
 account_activation_token = AccountActivationTokenGenerator()
