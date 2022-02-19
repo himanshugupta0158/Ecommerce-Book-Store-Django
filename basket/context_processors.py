@@ -7,6 +7,4 @@ file will be accessable in site wide/anywhere in this project.
 
 
 def basket(request):
-    return {
-        'basket': Basket(request)
-    }
+    return {"basket": Basket(request)}

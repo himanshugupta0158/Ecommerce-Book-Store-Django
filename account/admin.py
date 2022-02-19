@@ -1,7 +1,5 @@
 from django.contrib import admin
 
-from account.models import UserBase
-
-# Register your models here.
+from .models import UserBase
 
 admin.site.register(UserBase)
