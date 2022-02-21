@@ -1,3 +1,4 @@
+from account.models import Address
 from basket.basket import Basket
 from django.http.response import JsonResponse
 from django.shortcuts import render
@@ -12,16 +13,16 @@ def add(request):
         order_key = request.POST.get("order_key")
         user_id = request.user.id
         baskettotal = basket.get_total_price()
-        name = request.POST["name"]
+        address = Address.objects.get(customer=user_id)
         # Check if order exists
         if Order.objects.filter(order_key=order_key).exists():
             pass
         else:
             order = Order.objects.create(
                 user_id=user_id,
-                full_name=name,
-                address1="add1",
-                address2="add2",
+                full_name=request.user.name,
+                address1=address.address_line,
+                address2=address.address_line2,
                 total_paid=baskettotal,
                 order_key=order_key,
             )
