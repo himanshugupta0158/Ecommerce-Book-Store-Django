@@ -34,6 +34,13 @@ a per-site-visitor basis.
 -> Session ID is used to retrieve the associated data.
 -> Data in session can be -> user's data , data related to website,..etc.
 
+python library -> django-countries
+install by : pip install django-countries
+this one provided a predefined list of different countries.
 
+Python django-debug-toolbar :
+it is a diagnostic tool and it provided information about 
+our project .
+it give us a background check up of queries .
 
 

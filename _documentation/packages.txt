@@ -1,0 +1,13 @@
+Package List
+####
+
+django
+black
+flake8
+isort
+django-mptt
+django-countries
+pillow
+stripe
+coverage
+six
