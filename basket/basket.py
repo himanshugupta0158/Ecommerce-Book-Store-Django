@@ -1,6 +1,6 @@
 from decimal import Decimal
 
-from django.conf import settings
+from core.settings import base as settings
 from store.models import Product
 
 

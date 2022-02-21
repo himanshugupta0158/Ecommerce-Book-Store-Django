@@ -52,6 +52,7 @@ def stripe_webhook(request):
 
     # Handle the event
     if event.type == "payment_intent.succeeded":
+        print("payment_intent.succeeded")
         payment_confirmation(event.data.object.client_secret)
 
     else:

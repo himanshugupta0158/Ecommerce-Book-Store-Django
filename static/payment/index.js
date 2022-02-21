@@ -47,6 +47,7 @@ form.addEventListener('submit', function(ev) {
         url: 'http://127.0.0.1:8000/orders/add/',
         data: {
             order_key: clientsecret,
+            name: custName,
             csrfmiddlewaretoken: CSRF_TOKEN,
             action: "post",
         },

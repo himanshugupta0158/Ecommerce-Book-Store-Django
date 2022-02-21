@@ -29,7 +29,7 @@ SECRET_KEY = "django-insecure-b%)yyecn)fvv&)r@otp)m3wcs9h7hrp5x$n1!h04a*q^mry3r=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["mydomain.com", "127.0.0.1"]
+ALLOWED_HOSTS = ["mydomain.com", "127.0.0.1", "localhost"]
 
 
 # Application definition
@@ -164,3 +164,7 @@ STRIPE_PUBLIC_KEY = (
 STRIPE_SECRET_KEY = (
     "sk_test_51KT2Q7SGWWpTwqWDyc9jCgnVygntbKBgrD3Hh8LayH2H2toyJwkLUDdYUik7aDKFV0DtQpshpjSYJYtAIVtFSJnJ00Nv3uCI9K"
 )
+
+# Stripe Payment
+STRIPE_ENDPOINT_SECRET = "whsec_73463041508bd81499c906e23161df18e57926db8a82a5e2f12982e8dcf598df"
+# stripe listen --forward-to localhost:8000/payment/webhook/
