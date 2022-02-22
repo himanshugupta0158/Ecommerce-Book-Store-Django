@@ -8,6 +8,7 @@ colorama==0.4.4
 coverage==6.3.1
 Django==3.2.10
 django-countries==7.2.1
+django-debug-toolbar==3.2.4
 django-js-asset==2.0.0
 django-mptt==0.13.4
 flake8==4.0.1
@@ -31,3 +32,5 @@ tomli==2.0.1
 typing_extensions==4.1.1
 tzdata==2021.5
 urllib3==1.26.8
+waitress==2.0.0
+whitenoise==6.0.0
